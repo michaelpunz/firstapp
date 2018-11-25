@@ -1,0 +1,25 @@
+### Get all feedbaks sent by an user
+
+GET http://localhost:3001/api/feedbacks?author=5abdfccabeded40caf58e23f
+
+### Get average feedback received by an user
+
+GET http://localhost:3001/api/feedbacks?receiver=5ad44889312cc522b02d1613
+
+### Add feedback
+
+POST http://localhost:3001/api/feedbacks
+Content-Type: application/json
+
+{
+  "event": "5abdfccabeded40caf58e25b",
+  "receiver": "5aba41658b1ad2161a0f8c7d",
+  "reliabilityRating": 1,
+  "reliabilityText": "Hello world",
+  "performanceRating": 5,
+  "performanceText": "Hello world 2"
+}
+
+### Delete feedback
+
+DELETE http://localhost:3001/api/feedbacks/5ae7219c95d3a62aac9e80b1

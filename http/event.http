@@ -1,0 +1,60 @@
+### Get user events
+
+GET http://localhost:3001/api/events?userType=Artist&userId=5ae97e8cbd561b18658b786a
+
+### Get an event by id
+
+GET http://localhost:3001/api/events/5ae715eb64657324bb22315c
+
+### Insert a new event
+POST http://localhost:3001/api/events
+Content-Type: application/json
+
+{
+  "name": "PROVA",
+  "description": "Questo evento sarà una figata",
+  "picture": "",
+  "date": "2018-06-28T14:00:00.000Z",
+  "location":{
+    "type": "Point",
+    "coordinates": [1, 1],
+    "address": "Via Verdi"
+  },
+  "typologies": ["painting","music"],
+  "price": 30
+}
+
+### Edit an existing event
+
+PATCH http://localhost:3001/api/events/5ae715eb64657324bb22315c
+Content-Type: application/json
+
+{
+  "artists": ["5ae4b4f1a66547253413cbcb"],
+  "name": "Nome modificato",
+  "description": "Questo era una figata",
+  "picture": "",
+  "date": "2018-06-26T14:00:00.000Z",
+  "location":{
+    "type": "Point",
+    "coordinates": [2, 2],
+    "address": "Via Verdi"
+  },
+  "typologies": ["painting"],
+  "price": 100
+}
+
+### Get an event QRCode
+
+GET http://localhost:3001/api/events/5ae239a6b59d3320bbfbdef0/qrcode
+
+### POST an event QRCode to allow review
+
+POST http://localhost:3001/api/events/5ae239a6b59d3320bbfbdef0/qrcode/45377b89-de28-4d72-9941-8b2803d7b026
+Content-Type: application/json
+
+{}
+
+### DELETE an event
+
+DELETE http://localhost:3001/api/events/5ae239a6b59d3320bbfbdef0

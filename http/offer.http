@@ -1,0 +1,51 @@
+### Get all logged user offers
+GET http://localhost:3001/api/offers
+
+### Get logged user offer with a place
+GET http://localhost:3001/api/offers?recipientId=5ae8cb8de612db451da25d0a
+
+### Get logged user offer with a place for an event
+GET http://localhost:3001/api/offers/event?recipientId=5ae8cb8de612db451da25d0a&eventId=5ae8cb8de612db451da25d29
+
+### Create an offer
+
+POST http://localhost:3001/api/offers/
+Content-Type: application/json
+
+{
+  "date": "2018-05-26T14:00:00.000Z",
+  "price": 50,
+  "event": "5abb9f23c60cfadbd1ae3382",
+  "recipientId": "5ae3402602fc111cfaaa72c2"
+}
+
+### Edit an offer
+
+PATCH http://localhost:3001/api/offers/5ae3485ed198b31fa2af8a03
+Content-Type: application/json
+
+{
+  "action": "edit",
+  "date": "2018-06-26T14:00:00.000Z",
+  "price": 50,
+  "event": "5abb9f23c60cfadbd1ae3382"
+}
+
+### Accept an offer
+
+PATCH http://localhost:3001/api/offers/5ae3485ed198b31fa2af8a03
+Content-Type: application/json
+
+{
+  "action": "accept"
+}
+
+### Decline an offer
+
+PATCH http://localhost:3001/api/offers/5ae3485ed198b31fa2af8a03
+Content-Type: application/json
+
+{
+  "action": "decline",
+  "declineReason": "The price is too high"
+}

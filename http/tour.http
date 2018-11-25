@@ -1,0 +1,90 @@
+### Get the tours
+
+GET http://localhost:3001/api/tours?userId=5ae72dd817fd70319f4d6fc9
+
+### Get the tour
+
+GET http://localhost:3001/api/tours/5ae72dd817fd70319f4d6fc9
+
+### Create a tour
+
+POST http://localhost:3001/api/tours
+Content-Type: application/json
+
+{
+  "name": "Bel tour",
+  "startLocation": {
+      "type": "Point",
+      "coordinates": [1, 1],
+      "address": "Via Verdi"
+  },
+  "endLocation": {
+      "type": "Point",
+      "coordinates": [2, 2],
+      "address": "Via Rossi"
+  }
+}
+
+### Edit the tour
+
+PATCH http://localhost:3001/api/tours/5ae72edc1567ee3219d6024b
+Content-Type: application/json
+
+{
+  "name": "Bellissimo tour",
+  "startLocation": {
+      "type": "Point",
+      "coordinates": [1, 3],
+      "address": "Via Viola"
+  },
+  "endLocation": {
+      "type": "Point",
+      "coordinates": [7, 2],
+      "address": "Via Grigia"
+  }
+}
+
+### Delete the tour
+
+DELETE http://localhost:3001/api/tours/5ae72edc1567ee3219d6024b
+
+### Get the tour stages
+
+GET http://localhost:3001/api/tours/5ae72f2a75cede323e3705e4/stages
+
+### Get the stage
+
+GET http://localhost:3001/api/tours/5ae72f2a75cede323e3705e4/stages/5ae72f5bd4597c325631c834
+
+### Create a stage
+
+POST http://localhost:3001/api/tours/5ae72f2a75cede323e3705e4/stages
+Content-Type: application/json
+
+{
+  "location": {
+      "type": "Point",
+      "coordinates": [3, 3],
+      "address": "Via Gialli"
+  },
+  "date": "2018-06-28T14:00:00.000Z"
+}
+
+### Edit the stage
+
+PATCH http://localhost:3001/api/tours/5ae72f2a75cede323e3705e4/stages/5ae72f5bd4597c325631c834
+Content-Type: application/json
+
+{
+  "location": {
+      "type": "Point",
+      "coordinates": [4, 4],
+      "address": "Via Marroni"
+  },
+  "date": "2019-06-28T14:00:00.000Z"
+}
+
+### Delete the stage
+
+DELETE http://localhost:3001/api/tours/5ae72f2a75cede323e3705e4/stages/5ae72f5bd4597c325631c834
+

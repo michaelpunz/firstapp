@@ -1,0 +1,91 @@
+### Session
+
+POST http://localhost:3001/api/session
+Content-Type: application/json
+
+{}
+
+### Signup
+
+POST http://localhost:3001/api/signup
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "password",
+  "confirmPassword": "password"
+}
+
+### Login
+
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "password"
+}
+
+### Logout
+
+GET http://localhost:3001/api/logout
+Content-Type: application/json
+
+### Update profile
+
+POST http://localhost:3001/api/account/profile
+Content-Type: application/json
+
+{
+  "userType": "Artist",
+  "profile": {
+    "fullname": "Mario verdi",
+    "description": "Hello world",
+    "location": {
+      "type": "Point",
+      "coordinates": [1, 1],
+      "address": "Via Verdi"
+    },
+    "typologies": ["music", "painting"],
+    "links": [
+      { "label": "Facebook", "url": "https://www.facebook.com/" }
+    ]
+  }
+}
+
+### Update credentials
+
+POST http://localhost:3001/api/account/credentials
+Content-Type: application/json
+
+{
+  "email": "tester@gmail.com",
+  "password": "password",
+  "newPassword": "password1",
+  "confirmPassword": "password1"
+}
+
+### Delete account
+
+POST http://localhost:3001/api/account/delete
+Content-Type: application/json
+
+{
+  "password": "password"
+}
+
+### GET all artists
+
+GET http://localhost:3001/api/users?userType=Artist
+
+### GET all places
+
+GET http://localhost:3001/api/users?userType=Place
+
+### GET all viewers
+
+GET http://localhost:3001/api/users?userType=Viewer
+
+### Get an user by id
+
+GET http://localhost:3001/api/users/5aba41658b1ad2161a0f8c7c

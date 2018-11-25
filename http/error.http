@@ -1,0 +1,12 @@
+POST http://localhost:3001/api/errors
+Content-Type: application/json
+
+{
+  "error": {
+    "message": "Error",
+    "stack": "Error stack",
+    "fileName": "somefile.js",
+    "lineNumber": 10,
+    "columnNumber": 20
+  }
+}

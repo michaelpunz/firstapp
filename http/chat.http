@@ -1,0 +1,26 @@
+### Get all user conversations
+
+GET http://localhost:3001/api/chat
+
+### Get all conversation messages
+
+GET http://localhost:3001/api/chat/5ace5f250d704b20f300d742
+
+### Create a new conversation
+
+POST http://localhost:3001/api/chat
+Content-Type: application/json
+
+{
+  "recipient": "5ac4b8091ebdf8106f3bd3e2",
+  "message": "Ciao, sto iniziando la conversazione"
+}
+
+### Create a new message
+
+POST http://localhost:3001/api/chat/5ace5f250d704b20f300d742
+Content-Type: application/json
+
+{
+  "message": "Ciao tutto okay?"
+}

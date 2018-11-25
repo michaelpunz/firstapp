@@ -1,0 +1,8 @@
+POST http://localhost:3001/api/contact
+Content-Type: application/json
+
+{
+  "name": "Jiayi",
+  "email": "jiayi.ghu@gmail.com",
+  "message": "Hello world"
+}

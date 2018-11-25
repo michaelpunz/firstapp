@@ -1,0 +1,38 @@
+### Search by name
+
+GET http://localhost:3001/api/search?type=Place&fullname=group
+
+### Search artists by position
+
+GET http://localhost:3001/api/search?type=Artist&lat=45.41&lng=11.87
+
+### Search events by position
+
+GET http://localhost:3001/api/search?type=Event&lat=45.41&lng=11.87
+
+### Search places by both name and position
+
+GET http://localhost:3001/api/search?type=Place&fullname=group&lat=45.41&lng=11.87
+
+### Search events by typologies
+
+GET http://localhost:3001/api/search?type=Event&typologies=music,painting
+
+### Search events by place/artist name
+
+GET http://localhost:3001/api/search?type=Event&eventPlaceName=group
+
+### Search events by date range
+
+GET http://localhost:3001/api/search?type=Event&eventDateFrom=2018-03-26T14:00:00.000Z&eventDateTo=2018-06-26T14:00:00.000Z
+
+
+# NEAREST
+
+### Search places by nearest position
+
+GET http://localhost:3001/api/search/nearest?type=Place&lat=45.41&lng=11.87
+
+### Search events by nearest position
+
+GET http://localhost:3001/api/search/nearest?type=Event&lat=45.41&lng=11.87

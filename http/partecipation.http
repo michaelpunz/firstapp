@@ -1,0 +1,19 @@
+### Get the logged user partecipation of an event
+
+GET http://localhost:3001/api/events/5ae4b4f1a66547253413cc0b/partecipations/me
+
+### Insert a partecipation
+
+POST http://localhost:3001/api/events/5ae4b4f1a66547253413cc0b/partecipations/me
+
+### Delete the partecipation of an event
+
+DELETE http://localhost:3001/api/events/5ae4b4f1a66547253413cc0b/partecipations/me
+
+### Get the number of partecipants to an event
+
+GET http://localhost:3001/api/events/5ae4b4f1a66547253413cc0b/partecipations/count
+
+### Get the list of user partecipations
+
+GET http://localhost:3001/api/partecipations?userId=5ae4e71f36bcdd302959052c

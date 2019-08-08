@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/BlackSheepTeam/TuTourSelf.svg?style=svg&circle-token=0fbc23bb711c81a4c9249cb2b584e44ef8f68108)](https://circleci.com/gh/BlackSheepTeam/TuTourSelf)
 
-The team BlackSheep has based its back-end project on [Typescript-Node-Starter](https://github.com/Microsoft/TypeScript-Node-Starter), with heavy customisations like [ReactJS](https://reactjs.org) instead of a static [Pug](https://pugjs.org/api/getting-started.html) template and the addition of Google authentication. The original project has also been simplified and several packages have been removed to keep the dependencies minimal.
+The team has based its back-end project on [Typescript-Node-Starter](https://github.com/Microsoft/TypeScript-Node-Starter), with heavy customisations like [ReactJS](https://reactjs.org) instead of a static [Pug](https://pugjs.org/api/getting-started.html) template and the addition of Google authentication. The original project has also been simplified and several packages have been removed to keep the dependencies minimal.
 
 # Getting started
 - Install dependencies
